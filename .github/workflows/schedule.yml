@@ -2,7 +2,7 @@ name: Schedule
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '6 * * * *'
+    - cron:  '46 * * * *'
 jobs:
   Request:
     name: Start Request
