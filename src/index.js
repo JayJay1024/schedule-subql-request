@@ -1,4 +1,4 @@
-import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+import { request, gql } from 'graphql-request'
 
 const endpoints = [
   "https://api.subquery.network/sq/JayJay1024/crab-nft",
@@ -20,15 +20,10 @@ const query = gql`
 `;
 
 const main = async () => {
-  for (const uri of endpoints) {
-    console.log(uri);
-    const client = new ApolloClient({ uri, cache: new InMemoryCache() });
-
+  for (const endpoint of endpoints) {
+    console.log(endpoint);
     try {
-      const res = await client.query({
-        query,
-      });
-      console.log(res);
+      await request(endpoint, query);
     } catch (_) {}
   }
 };
