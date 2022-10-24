@@ -1,7 +1,7 @@
 name: Schedule
 on:
   schedule:
-    - cron:  '5 17 * * *'
+    - cron:  '6 * * * *'
 jobs:
   Request:
     name: Start Request
