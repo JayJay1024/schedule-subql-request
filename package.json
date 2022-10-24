@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node src/index.ts"
   },
+  "type": "module",
   "repository": "git@github.com:JayJay1024/schedule-subql-request.git",
   "author": "JayJay1024 <lygm1062@gmail.com>",
   "license": "MIT",
