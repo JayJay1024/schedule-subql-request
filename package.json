@@ -7,5 +7,10 @@
   },
   "repository": "git@github.com:JayJay1024/schedule-subql-request.git",
   "author": "JayJay1024 <lygm1062@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@apollo/client": "^3.7.0",
+    "graphql": "^16.6.0",
+    "typescript": "^4.8.4"
+  }
 }
