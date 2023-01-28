@@ -2,7 +2,6 @@ import { request, gql } from "graphql-request";
 
 const endpoints = [
   "https://api.subquery.network/sq/hhhx2048/crab-nft",
-  "https://api.subquery.network/sq/JayJay1024/crab-nft",
   "https://api.subquery.network/sq/JayJay1024/darwinia-nft",
 ];
 
