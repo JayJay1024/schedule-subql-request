@@ -1,4 +1,4 @@
-import { request, gql } from 'graphql-request'
+import { request, gql } from "graphql-request";
 
 const endpoints = [
   "https://api.subquery.network/sq/hhhx2048/crab-nft",
