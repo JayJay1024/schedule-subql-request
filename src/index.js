@@ -23,8 +23,11 @@ const main = async () => {
   for (const endpoint of endpoints) {
     console.log(endpoint);
     try {
-      await request(endpoint, query);
-    } catch (_) {}
+      const response = await request(endpoint, query);
+      console.log('totalCount:', response?.remarkedNftAddresses?.totalCount);
+    } catch (err) {
+      console.error('An error occurred:', err);
+    }
   }
 };
 
