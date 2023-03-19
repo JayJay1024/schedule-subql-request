@@ -7,13 +7,17 @@ const endpoints = [
 
 const query = gql`
   query {
-    remarkedNftAddresses(first: 2) {
+    remarkedNftAddresses(first: 99) {
       totalCount
       nodes {
         id
         signer
         value
         addressValue
+        blockNumber
+        extrinsicIndex
+        extrinsicHash
+        extrinsicTimestamp
       }
     }
   }
@@ -22,11 +26,13 @@ const query = gql`
 const main = async () => {
   for (const endpoint of endpoints) {
     console.log(endpoint);
-    try {
-      const response = await request(endpoint, query);
-      console.log('totalCount:', response?.remarkedNftAddresses?.totalCount);
-    } catch (err) {
-      console.error('An error occurred:', err);
+    for (let i = 0; i < 60; i++) {
+      try {
+        const response = await request(endpoint, query);
+        console.log('totalCount:', response?.remarkedNftAddresses?.totalCount);
+      } catch (err) {
+        console.error(`#${i} An error occurred:`, err);
+      }
     }
   }
 };
