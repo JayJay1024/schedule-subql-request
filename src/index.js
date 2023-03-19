@@ -29,7 +29,7 @@ const main = async () => {
     for (let i = 0; i < 60; i++) {
       try {
         const response = await request(endpoint, query);
-        console.log('totalCount:', response?.remarkedNftAddresses?.totalCount);
+        // console.log('totalCount:', response?.remarkedNftAddresses?.totalCount);
       } catch (err) {
         console.error(`#${i} An error occurred:`, err);
       }
